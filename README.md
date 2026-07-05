@@ -6,6 +6,11 @@ Sport World - Frontend Landing Page
 
 
 <img width="1342" height="3909" alt="_C__Users_Codeline%20Comp_Desktop_convert%20figma%20to%20HTML%20 %20CSS_index html" src="https://github.com/user-attachments/assets/723976a7-834c-442f-92c5-1f53fe31627b" />
+
+  🛠️ Challenges Faced & Core Solutions1.
+   Cascade Redundancy & Conflicting @media RulesChallenge: The stylesheet contained duplicated, overlapping definitions for the 768px tablet view breakpoint. This created ordering issues where flex directions for .site-footer and container rules conflicted with each other during responsive downscaling.Solution: Cleaned and unified the cascading layout rules inside the CSS architecture. Consolidated duplicate blocks under a single @media (max-width: 768px) umbrella to maintain an expected code sequence and predictable inheritance behavior.  2. Aspect Ratio Drift Across Differing Card ContentsChallenge: Varying paragraph sizes for different sports cards (e.g., Football vs. Basketball) caused container boxes to stretching unevenly, breaking row alignment.  Solution: Applied strict wrapper constraints utilizing CSS properties (aspect-ratio: 1 / 1 for small content thumbnails and 16 / 9 for widescreen panels) combined with object-fit: cover. This isolates image rendering mechanics completely from raw text lengths, keeping components consistent.  3. Preserving Avatar Proportions Inside Circular FramesChallenge: Player portraits extracted from source assets scaled irregularly when bound to circular layout borders (border-radius: 50%), causing distortion.Solution: Defined explicit square bounding parameters (width: 40px; height: 40px;) while declaring object-fit: cover directly on the avatar elements. This locks the image positioning context inside the element dimensions, keeping avatars circular across device screen widths.
+
+   
 ## 🚀 How to Run the Project
 
 Follow these steps to initialize and review the project locally:
@@ -30,7 +35,6 @@ Follow these steps to initialize and review the project locally:
    │   └── Kylian Mbappe.webp
    └── README.md
 
-   🛠️ Challenges Faced & Core Solutions1.
-   Cascade Redundancy & Conflicting @media RulesChallenge: The stylesheet contained duplicated, overlapping definitions for the 768px tablet view breakpoint. This created ordering issues where flex directions for .site-footer and container rules conflicted with each other during responsive downscaling.Solution: Cleaned and unified the cascading layout rules inside the CSS architecture. Consolidated duplicate blocks under a single @media (max-width: 768px) umbrella to maintain an expected code sequence and predictable inheritance behavior.  2. Aspect Ratio Drift Across Differing Card ContentsChallenge: Varying paragraph sizes for different sports cards (e.g., Football vs. Basketball) caused container boxes to stretching unevenly, breaking row alignment.  Solution: Applied strict wrapper constraints utilizing CSS properties (aspect-ratio: 1 / 1 for small content thumbnails and 16 / 9 for widescreen panels) combined with object-fit: cover. This isolates image rendering mechanics completely from raw text lengths, keeping components consistent.  3. Preserving Avatar Proportions Inside Circular FramesChallenge: Player portraits extracted from source assets scaled irregularly when bound to circular layout borders (border-radius: 50%), causing distortion.Solution: Defined explicit square bounding parameters (width: 40px; height: 40px;) while declaring object-fit: cover directly on the avatar elements. This locks the image positioning context inside the element dimensions, keeping avatars circular across device screen widths.
+ 
 
 
